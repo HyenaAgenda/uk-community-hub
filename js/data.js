@@ -14,7 +14,7 @@ const ukCommunities = {
                     {
                         id: 'fur-the-moment',
                         name: 'FurTheMoment',
-                        description: 'FurTheMoment is a group of like-minded individuals brought together by a shared passion for the furry fandom. Hosts events on the first Sunday of each month at a variety of venues, keeping the community connected online via Telegram and Discord.',
+                        description: 'FurTheMoment is a group of like-minded individuals brought together by a shared passion for the furry fandom. Hosts events on the first Sunday of each month at a variety of venues, keeping the community connected online via Telegram and Discord. The primary venue is a very lovely bar in central cardiff with the fursuit walk taking you to the castle and surrounding green spaces just across the street. Note this meet is NOT 18+ so children will be present. Please read all rules set out by the meet staff. ',
                         telegramLink: '#',
                         website: 'https://www.furthemoment.com/',
                         lat: 51.4816,
@@ -70,7 +70,7 @@ const ukCommunities = {
                     {
                         id: 'wolverhampton-furs',
                         name: 'Wolverhampton & Black Country Furs',
-                        description: 'Relativily new group in the Wolverhampton and the Black Country region with informal meets and planned meets in future',
+                        description: 'Relativily new group in the Wolverhampton and the Black Country region with informal meets and planned meets in future. It is a very friendly and welcoming group maing it great for newcomers and regular members who want a relaxing enviroment to chill and be themselves. Note future meets will be 18+',
                         telegramLink: 't.me/yamfurs',
                         website: 'https://wolverhamptonfurs.com/',
                         lat: 52.5869,
