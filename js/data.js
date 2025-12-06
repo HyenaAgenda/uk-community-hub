@@ -554,6 +554,10 @@ const ukCommunities = {
                         description: 'SotonFurs is a regularly held furmeet located in Southampton, United Kingdom. As of May 2025, the Telegram channel reports over 480 members. Regular meets organized via community telegram at the Heartbreakers Bar / Venue in Southampton.',
                         telegramLink: '#',
                         website: '#',
+                        socials: {
+                            twitter: "https://x.com/SotonFurMeets",
+                            instagram: "https://www.instagram.com/sotonfurs/?hl=en"
+                        },
                         lat: 50.9097,
                         lon: -1.4044,
                         communitySize: 'Large',
@@ -570,7 +574,11 @@ const ukCommunities = {
                         name: 'PlymouthFurs',
                         description: 'PlymouthFurs is a regional furry group centered around the city of Plymouth in the United Kingdom. It also covers a majority of the Devon and Cornwall area. They hold monthly fur-meets on the last Saturday of every month. Current Staff: Aconight, theonecanine, Nitwolf112, TkkAttack, Kloof, Chili',
                         telegramLink: '#',
-                        website: 'https://x.com/PlymouthFurs',
+                        website: '#',
+                        socials: {
+                            twitter: "https://x.com/PlymouthFurs",
+                            facebook: "https://www.facebook.com/groups/386364985033689/",
+                        },
                         lat: 50.3755,
                         lon: -4.1427,
                         communitySize: 'Medium',
@@ -595,6 +603,10 @@ const ukCommunities = {
                         description: 'Cambridge and East Anglia furry community. Online meets via Discord plus occasional local in-person meets.',
                         telegramLink: '#',
                         website: 'https://cambfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/CambridgeFurs",
+                            facebook: "https://www.facebook.com/groups/cambridgefurs/",
+                        },
                         lat: 52.2053,
                         lon: 0.1218,
                         communitySize: 'Medium',
@@ -612,6 +624,9 @@ const ukCommunities = {
                         description: 'Peterborough furry community organizing local meets and socials across the region. The Twitter account has been inactive since 2022 so its unlikely official meets are organised however here are smaller groups of furs in the city and surrounding area',
                         telegramLink: '#',
                         website: '#',
+                        socials: {
+                            twitter: "https://x.com/PeterboroughFur",
+                        },
                         lat: 52.5733,
                         lon: -0.2417,
                         communitySize: 'Small',
@@ -628,11 +643,30 @@ const ukCommunities = {
                         name: 'KentFurs',
                         description: 'Kent furry community.',
                         telegramLink: '#',
-                        website: 'https://x.com/KentFurs',
+                        website: '#',
+                        socials: {
+                            twitter: "https://x.com/KentFurs",
+                            facebook: "https://www.facebook.com/KentFurs/",
+                        },
                         lat: 51.2746,
                         lon: 0.5235,
                         communitySize: 'Small',
                         active: true
+                    },
+                    {
+                        id: 'furrys-of-kent',
+                        name: 'Furrys of Kent',
+                        description: 'Furrys of Kent is a second local furry group based in Kent, UK. They seemed to be active up until mid 2024 and then stopped posting in any official channels. They likely merged with KentFurs',
+                        telegramLink: 'https://t.co/Oehr454JtS',
+                        website: '#',
+                        socials: {
+                            twitter: "https://x.com/furriesofkent",
+
+                        },
+                        lat: 51.2787,
+                        lon: 0.5218,
+                        communitySize: 'Small',
+                        active: false
                     }
                 ]
             }

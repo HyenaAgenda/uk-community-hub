@@ -149,7 +149,7 @@
                             <i class="fas fa-circle"></i>
                             Status
                         </span>
-                        <span style="color: #10b981; font-weight: 600;">Active</span>
+                        <span id="group-status" style="font-weight: 600;">Loading...</span>
                     </div>
                 </div>
 
@@ -253,6 +253,15 @@
             document.getElementById('group-members').textContent = group.communitySize;
             document.getElementById('breadcrumb-city').textContent = group.city;
             document.getElementById('breadcrumb-group').textContent = group.name;
+                const statusEl = document.getElementById('group-status');
+                if (group.active) {
+                statusEl.textContent = 'Active';
+                statusEl.style.color = '#10b981'; // green
+                } else {
+                statusEl.textContent = 'Inactive';
+                statusEl.style.color = '#ef4444'; // red
+            }
+
             
             // Set join link — if missing, go to no-socials page so users can report the missing link
             const joinLink = document.getElementById('join-link');
