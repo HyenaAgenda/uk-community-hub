@@ -1,6 +1,6 @@
 // UK Fur Network Community Database
 // This file contains all communities organized by region
-// Data sourced from UK-FUR-NETWORK - Sheet1.csv
+// Data sourced from  Google gurrrrlll so much fuckin googling
 
 const ukCommunities = {
     // Wales
