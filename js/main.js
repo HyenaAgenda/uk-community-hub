@@ -94,14 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     // fallback coords if group missing lat/lon
                     const defaultCenter = [54.0, -2.0];
 
-                    // Color mapping for regions
+                    // Color mapping for regions (keys are normalized to lowercase)
                     const regionColors = {
-                        'Wales': '#7c3aed',
-                        'Midlands': '#a855f7',
-                        'North England': '#10b981',
-                        'South England': '#ef4444',
-                        'East England': '#2563eb',
-                        'Scotland': '#f59e0b'
+                        'wales': '#7c3aed',
+                        'midlands': '#a855f7',
+                        'west midlands': '#a855f7',
+                        'east midlands': '#8b5cf6',
+                        'north england': '#10b981',
+                        'south england': '#ef4444',
+                        'east england': '#2563eb',
+                        'scotland': '#f59e0b'
                     };
 
                     const allMarkers = [];
@@ -117,8 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             lon = rc[1];
                         }
 
-                        // Create a colored marker icon based on region
-                        const regionColor = regionColors[group.region] || '#6b7280';
+                        // Create a colored marker icon based on region (normalize region names)
+                        const regionKey = (group.region || '').toString().toLowerCase();
+                        const regionColor = regionColors[regionKey] || regionColors[group.region] || '#6b7280';
                         const markerIcon = L.divIcon({
                             html: `<div style="background-color: ${regionColor}; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
                             iconSize: [24, 24],

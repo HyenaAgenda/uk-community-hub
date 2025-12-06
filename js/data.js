@@ -44,8 +44,8 @@ const ukCommunities = {
     },
 
     // England - Midlands
-    'midlands': {
-        name: 'Midlands',
+    'west midlands': {
+        name: 'West Midlands',
         counties: {
             'wolverhampton': {
                 name: 'Wolverhampton',
@@ -87,6 +87,29 @@ const ukCommunities = {
                         website: 'https://covfurs.co.uk/',
                         lat: 52.4068,
                         lon: -1.5197,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            }
+        }
+    },
+
+    'East Midlands': {
+        name: 'East Midlands',
+        counties: {
+            'nottingham': {
+                name: 'Nottingham',
+                county: 'East Midlands',
+                groups: [
+                    {
+                        id: 'nottingham-furs',
+                        name: 'NottsFurs',
+                        description: 'Nottingham furry community organizing regular meets and social events in the East Midlands area.',
+                        telegramLink: 'https://t.co/f42qc57Wtp',
+                        website: '#',
+                        lat: 52.9548,
+                        lon: -1.1581,
                         communitySize: 'Medium',
                         active: true
                     }
@@ -166,9 +189,28 @@ const ukCommunities = {
                         active: true
                     }
                 ]
+            },
+            'sheffield': {
+                name: 'Sheffield',
+                county: 'South Yorkshire',
+                groups: [
+                    {
+                        id: 'sheffield-furs',
+                        name: 'Sheffield Furs',
+                        description: 'The Sheffield Furmeets have been running in their current state since January 2015, the meet is staffed by eight local furries: Hikari, Hir, Lucas, Mini, Saleck, Sneeze, Sparks and Vannin. They aim to run the meets on the last Saturday of each month but this may change depending on availability of the venue, keep on eye on the socials to keep up to date with meet announcements. ',
+                        telegramLink: 'https://t.me/+2MKQifrA6VQ3N2Rk',
+                        website: '#',
+                        lat: 53.3811,
+                        lon: -1.4701,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
             }
         }
     },
+
+
 
     // England - South & South-West
     'south-england': {
