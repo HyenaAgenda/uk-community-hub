@@ -206,11 +206,24 @@ const ukCommunities = {
                         active: true
                     }
                 ]
-            }
-        }
-    },
-
-
+            },
+            'hull': {
+                name: 'Humber Furs',
+                county: 'East Yorkshire',
+                groups: [
+                    {
+                        id: 'humber-furs',
+                        name: 'Humber Furs',
+                        description: 'Humber Furs is the furry community based in the Hull and East Yorkshire area. They organize regular social meets and events for local furries.',
+                        telegramLink: '#',
+                        website: '#',
+                        lat: 53.7676,
+                        lon: -0.3274,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            },
 
     // England - South & South-West
     'south-england': {
