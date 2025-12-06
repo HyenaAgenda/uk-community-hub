@@ -303,12 +303,12 @@ const ukCommunities = {
                     {
                         id: 'berkshire-furs',
                         name: 'Berkshire Furs',
-                        description: 'Berkshire and Reading furry community. Run regular meets at local venues. Ticketed event with ID verification required.',
+                        description: 'Berkshire Furs is a local furry group for Berkshire and surrounding areas in the United Kingdom. As of September 2025, the Telegram group has over 475 members.As of 2025, the staff of Berkshire Furs are as follows: Shadow Raccoon,Bon Pansky,Leda,Washu,Draegarth,Tungro',
                         telegramLink: '#',
                         website: 'https://www.berkshirefurs.org.uk/',
                         lat: 51.4543,
                         lon: -0.9781,
-                        communitySize: 'Medium',
+                        communitySize: 'Large',
                         active: true
                     }
                 ]
@@ -341,7 +341,7 @@ const ukCommunities = {
                         telegramLink: '#',
                         lat: 50.9097,
                         lon: -1.4044,
-                        communitySize: 'Very Large',
+                        communitySize: 'Large',
                         active: true
                     }
                 ]
