@@ -873,7 +873,7 @@ const ukCommunities = {
                         communitySize: 'Small',
                         active: true,
                         expectations: {
-                            events: false,
+                            events: true,
                             chats: true,
                             art: true,
                             community: true
@@ -898,7 +898,7 @@ const ukCommunities = {
                             events: false,
                             chats: false,
                             art: false,
-                            community: true
+                            community: false
                             
                         }
                     }
@@ -957,6 +957,10 @@ const ukCommunities = {
                         description: 'IronFurs — Northern Ireland furry community based around Belfast. Monthly Saturday meets including casual meets, museum/convention trips.',
                         telegramLink: '#',
                         website: 'https://www.ironfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/ni_furs?lang=ar",
+                            facebook: "https://www.facebook.com/IronFurs/?locale=en_GB",
+                        },
                         lat: 54.5973,
                         lon: -5.9301,
                         communitySize: 'Medium',
