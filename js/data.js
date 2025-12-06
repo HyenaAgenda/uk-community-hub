@@ -24,6 +24,22 @@ const ukCommunities = {
                     }
                 ]
             },
+            'swansea': {
+                name: 'Swansea',
+                county: 'South Wales',
+                groups: [
+                    {
+                        id: 'swansea-furs',
+                        name: 'Swansea Furs',
+                        description: 'Swansea and South Wales furry community. Regular meets and social events organized via Telegram group.',
+                        telegramLink: 'https://t.me/swanseafurs',
+                        lat: 51.6214,
+                        lon: -3.9436,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            },
             'aberystwyth': {
                 name: 'Aberystwyth',
                 county: 'Central Wales',
@@ -389,6 +405,25 @@ const ukCommunities = {
                     }
                 ]
             },
+
+            'gloucester': {
+                name: 'Gloucester',
+                county: 'Southwest',
+                groups: [
+                    {
+                        id: 'gloucester-furs',
+                        name: 'Gloucester Furs',
+                        description: 'Gloucester and Southwest furry community. Regular meets and social events organized via Telegram groups and official website.',
+                        telegramLink: '#',
+                        website: 'https://gloucesterfurs.uk/',
+                        lat: 51.8642,
+                        lon: -2.2383,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            },
+
             'bristol': {
                 name: 'Bristol',
                 county: 'South West',
