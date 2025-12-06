@@ -203,6 +203,26 @@ const ukCommunities = {
                             
                         }
 
+                    },
+                    {
+                        id: 'leicester-furs',
+                        name: 'LeicFurs',
+                        description: 'LeicFurs is a friendly and welcoming furry community based in Leicester, UK. They host regular meets on the second Saturday of every month at a local venue, Firebug, between 1200-1700hrs. The meet is known for its inclusive and relaxed atmosphere, making it a great place for both newcomers and regular furries to chill and have fun. It is a relaxed spot with comfy sofas based around games consoles, with food and drink avaliable. Note this is a no fursuit meet currently .',
+                        telegramLink: '#',
+                        website: '#',
+                        socials: {
+                            twitter: "https://x.com/FurrMeets",
+                        },
+                        lat: 52.6369,
+                        lon: -1.1398,
+                        communitySize: 'Medium',
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                        }
                     }
                 ]
             }
@@ -242,6 +262,36 @@ const ukCommunities = {
                     }
                 ]
             },
+
+            'warrington': {
+                name: 'Warrington',
+                county: 'Cheshire',
+                groups: [
+                    {
+                        id: 'warrington-furs', 
+                        name: 'Warrington Furs',
+                        description: 'Warrington furs is a community based in Cheshire that host regular fur meets every month at The Hideout in Warrington. This meet is a friendly and welcoming enviroment great for both newcomers and regular members. Note this is a 18+ meet with ID required to enter the Bar.',
+                        telegramLink: 'https://t.me/+oKZ-9HG8-R5kNmY0',
+                        website: 'https://www.warringtonfurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/Warrington_Furs",
+                            instagram: "https://www.instagram.com/warringtonfurs/"
+                        },
+                        lat: 53.3906,
+                        lon: -2.5931,
+                        communitySize: 'Small',
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+                    }
+                ]
+            },
+
             'stoke-on-trent': {
                 name: 'Stoke-on-Trent',
                 county: 'Staffordshire',
@@ -857,6 +907,37 @@ const ukCommunities = {
                     }
                 ]
             },
+            
+            'norwich': {
+                name: 'Norwich',
+                county: 'Norfolk',
+                groups: [
+                    {
+                        id: 'norwich-furs',
+                        name: 'Norfolk & Norwich Furs',
+                        description: 'The Norfolk & Norwich furry furs group host regular meets are held every month on varying days at a friendly venue in Norwich city centre. The community is welcoming to both new and regular furs, providing a great environment for socialising and making new friends. Note this is a 18+ meet with ID required to enter the Bar.',
+                        telegramLink: '#',
+                        website: 'https://norfolkfurs.uk/',
+                        socials: {
+                            twitter: "https://x.com/NorwichFurmeets",
+                            instagram: "https://www.instagram.com/norfolkfurs/",
+                            facebook: "https://www.facebook.com/groups/314561808640766/?ref=group_browse&_rdr",
+                        },
+                        lat: 52.6309,
+                        lon: 1.2974,
+                        communitySize: 'Medium',
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+                    }
+                ]
+            },
+
             'peterborough': {
                 name: 'Peterborough',
                 county: 'Cambridgeshire',
