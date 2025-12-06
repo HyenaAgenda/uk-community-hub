@@ -145,7 +145,7 @@ const ukCommunities = {
                     {
                         id: 'mancfurs',
                         name: 'MancFurs',
-                        description: 'Manchester\'s vibrant furry community. One of the UK\'s most active communities with regular meetups held on the second weekend of every month.',
+                        description: 'Manchester\'s vibrant furry community. One of the UK\'s most active communities with regular meetups held on the second weekend of every month. located in the heart pf the Gay Village, this meet is set in a very welcoming, friendly and casual enviroment which offers a great experience for both regular attendees and newcomers. Note this is a 18+ meet with ID required to enter the Bar.',
                         telegramLink: '#',
                         website: 'https://www.mancfurs.org.uk/',
                         lat: 53.4808,
@@ -290,7 +290,7 @@ const ukCommunities = {
                     {
                         id: 'london-furs',
                         name: 'LondonFurs',
-                        description: 'The UK\'s largest metropolitan furry community based in London. Active community with regular social events including large ticketed events (Winter Weekender, boat party).',
+                        description: 'The UK\'s largest metropolitan furry community based in London. Active community with regular social events including large ticketed events (Winter Weekender, boat party). Please note this is a 18+ meet.',
                         telegramLink: '#',
                         website: 'https://londonfurs.org.uk/',
                         lat: 51.5074,
@@ -318,7 +318,7 @@ const ukCommunities = {
                     {
                         id: 'exeter-furs',
                         name: 'ExeterFurs',
-                        description: 'Exeter and Devon furry community organising monthly meets and larger events/parties.',
+                        description: 'Exeter and Devon furry community organising monthly meets and larger events/parties. This is a very active community with friendly and welcoming members. It is also important to note, this is a 18+ meet.',
                         telegramLink: '#',
                         website: 'https://exeterfurs.org.uk/',
                         lat: 50.7184,
@@ -448,7 +448,7 @@ const ukCommunities = {
                     {
                         id: 'bristol-furs',
                         name: 'Bristol Furs',
-                        description: 'Bristol furry community. First weekend of every month (Saturday) at a lovely venue.   ',
+                        description: 'Bristol furry community. First weekend of every month (Saturday) at a lovely venue. The community is very active and very welcoming to new members. Its location and excellent staff offer a great environment for both new and regular furries to meet and socialise. This meet is 18+',
                         telegramLink: '#',
                         website: 'https://bristolfurs.co.uk/',
                         lat: 51.4545,
@@ -467,6 +467,7 @@ const ukCommunities = {
                         name: 'Soton Furs',
                         description: 'SotonFurs is a regularly held furmeet located in Southampton, United Kingdom. As of May 2025, the Telegram channel reports over 480 members. Regular meets organized via community telegram at the Heartbreakers Bar / Venue in Southampton.',
                         telegramLink: '#',
+                        website: '#',
                         lat: 50.9097,
                         lon: -1.4044,
                         communitySize: 'Large',
