@@ -335,13 +335,13 @@ const ukCommunities = {
                 county: 'South Central',
                 groups: [
                     {
-                        id: 'hants-furs',
-                        name: 'HantsFurs',
-                        description: 'Hampshire-wide group centred around Southampton and Portsmouth. Informal semi-regular meets organized via community forums.',
+                        id: 'soton-furs',
+                        name: 'Soton Furs',
+                        description: 'SotonFurs is a regularly held furmeet located in Southampton, United Kingdom. As of May 2025, the Telegram channel reports over 480 members. Regular meets organized via community telegram at the Heartbreakers Bar / Venue in Southampton.',
                         telegramLink: '#',
                         lat: 50.9097,
                         lon: -1.4044,
-                        communitySize: 'Small',
+                        communitySize: 'Very Large',
                         active: true
                     }
                 ]
