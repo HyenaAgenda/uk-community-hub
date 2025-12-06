@@ -208,6 +208,7 @@ const ukCommunities = {
             }
         }
     },
+    
 
     // England - North
     'north-england': {
@@ -241,6 +242,35 @@ const ukCommunities = {
                     }
                 ]
             },
+            'stoke-on-trent': {
+                name: 'Stoke-on-Trent',
+                county: 'Staffordshire',
+                groups: [
+                    {
+                        id: 'stoke-furs',
+                        name: 'Stoke Furs',
+                        description: 'The Stoke-on-Trent furry community is connected by primarily discord over telegram, some non-fursuit meets are organised from time to time but there is no fursuit official meet yet. It is primarily a online community.',
+                        telegramLink: '#',
+                        website: '#',
+                        socials: {
+                            discord:"https://discord.gg/F97Pv7Q9"
+                        },
+                        lat: 53.0027,
+                        lon: -2.1794,
+                        communitySize: 'Small',
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+                    }
+                ]
+            },
+
+
             'newcastle': {
                 name: 'Newcastle',
                 county: 'Tyne and Wear',
