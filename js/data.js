@@ -20,7 +20,15 @@ const ukCommunities = {
                         lat: 51.4816,
                         lon: -3.1791,
                         communitySize: 'Very Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -40,7 +48,15 @@ const ukCommunities = {
                         lat: 51.6214,
                         lon: -3.9436,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -56,7 +72,15 @@ const ukCommunities = {
                         lat: 52.4153,
                         lon: -4.0826,
                         communitySize: 'Unknown',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             }
@@ -83,7 +107,15 @@ const ukCommunities = {
                         lat: 52.5869,
                         lon: -2.1280,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -104,7 +136,15 @@ const ukCommunities = {
                         lat: 52.4862,
                         lon: -1.8904,
                         communitySize: 'Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     },
                     {
                         id: 'coventry-furs',
@@ -118,7 +158,15 @@ const ukCommunities = {
                         lat: 52.4068,
                         lon: -1.5197,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             }
@@ -146,7 +194,15 @@ const ukCommunities = {
                         lat: 52.9548,
                         lon: -1.1581,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             }
@@ -173,7 +229,15 @@ const ukCommunities = {
                         lat: 53.4808,
                         lon: -2.2426,
                         communitySize: 'Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -195,7 +259,15 @@ const ukCommunities = {
                         lat: 54.9783,
                         lon: -1.6174,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -216,7 +288,15 @@ const ukCommunities = {
                         lat: 53.8008,
                         lon: -1.5491,
                         communitySize: 'Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
+
                     }
                 ]
             },
@@ -237,7 +317,14 @@ const ukCommunities = {
                         lat: 53.5228,
                         lon: -1.1287,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -258,7 +345,14 @@ const ukCommunities = {
                         lat: 53.9580,
                         lon: -1.0873,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -280,7 +374,14 @@ const ukCommunities = {
                         lat: 53.3811,
                         lon: -1.4701,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -301,7 +402,14 @@ const ukCommunities = {
                         lat: 53.7676,
                         lon: -0.3274,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -322,7 +430,14 @@ const ukCommunities = {
                         lat: 53.4084,
                         lon: -2.9916,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -353,7 +468,14 @@ const ukCommunities = {
                         lat: 51.5074,
                         lon: -0.1278,
                         communitySize: 'Very Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     },
                     {
                         id: 'barkade-furs',
@@ -364,7 +486,14 @@ const ukCommunities = {
                         lat: 51.5099,
                         lon: -0.1181,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -384,7 +513,14 @@ const ukCommunities = {
                         lat: 50.7184,
                         lon: -3.5339,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -405,7 +541,14 @@ const ukCommunities = {
                         lat: 50.8198,
                         lon: -1.0880,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -428,7 +571,14 @@ const ukCommunities = {
                         lat: 50.2632,
                         lon: -5.0530,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -444,7 +594,14 @@ const ukCommunities = {
                         lat: 51.0145,
                         lon: -3.1069,
                         communitySize: 'N/A',
-                        active: true
+                        active: true,   
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -461,7 +618,14 @@ const ukCommunities = {
                         lat: 50.8225,
                         lon: -0.1372,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     },
                     {
                         id: 'east-sussex-furs',
@@ -477,7 +641,14 @@ const ukCommunities = {
                         lat: 50.8659,
                         lon: -0.0833,
                         communitySize: 'Small',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -500,7 +671,14 @@ const ukCommunities = {
                         lat: 51.4543,
                         lon: -0.9781,
                         communitySize: 'Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -518,7 +696,14 @@ const ukCommunities = {
                         lat: 51.8642,
                         lon: -2.2383,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -540,7 +725,14 @@ const ukCommunities = {
                         lat: 51.4545,
                         lon: -2.5879,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -561,7 +753,14 @@ const ukCommunities = {
                         lat: 50.9097,
                         lon: -1.4044,
                         communitySize: 'Large',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -582,7 +781,14 @@ const ukCommunities = {
                         lat: 50.3755,
                         lon: -4.1427,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             }
@@ -610,7 +816,14 @@ const ukCommunities = {
                         lat: 52.2053,
                         lon: 0.1218,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -630,7 +843,14 @@ const ukCommunities = {
                         lat: 52.5733,
                         lon: -0.2417,
                         communitySize: 'Small',
-                        active: false
+                        active: false,
+                        expectations: {
+                            events: false,
+                            chats: false,
+                            art: false,
+                            community: true
+                            
+                        }
                     }
                 ]
             },
@@ -651,7 +871,14 @@ const ukCommunities = {
                         lat: 51.2746,
                         lon: 0.5235,
                         communitySize: 'Small',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     },
                     {
                         id: 'furrys-of-kent',
@@ -666,7 +893,14 @@ const ukCommunities = {
                         lat: 51.2787,
                         lon: 0.5218,
                         communitySize: 'Small',
-                        active: false
+                        active: false,
+                        expectations: {
+                            events: false,
+                            chats: false,
+                            art: false,
+                            community: true
+                            
+                        }
                     }
                 ]
             }
@@ -695,7 +929,14 @@ const ukCommunities = {
                         lat: 55.8642,
                         lon: -4.2518,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             }
@@ -719,7 +960,14 @@ const ukCommunities = {
                         lat: 54.5973,
                         lon: -5.9301,
                         communitySize: 'Medium',
-                        active: true
+                        active: true,
+                        expectations: {
+                            events: true,
+                            chats: true,
+                            art: true,
+                            community: true
+                            
+                        }
                     }
                 ]
             }
