@@ -230,6 +230,10 @@ const ukCommunities = {
                         description: 'Local Doncaster furry community for meetups and regional events. Current Staff as of August 2025, Mattmiles, Midnight, Floss, Hikari, Damien, Millie',
                         telegramLink: 'https://t.me/DoncasterFurs',
                         website: 'https://www.doncasterfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/DoncasterFurs",
+                            instagram: "https://www.instagram.com/doncasterfurs/"
+                        },
                         lat: 53.5228,
                         lon: -1.1287,
                         communitySize: 'Medium',
@@ -247,6 +251,10 @@ const ukCommunities = {
                         description: 'YorkFurs refers to the community of furries and their meet-ups in the city of York, UK. Meets are run monthly, traditionally on the first weekend of the month. The meets have been run since at least 2006 and have taken place at various venues across the city. As of 2023, meets take place at SPARK on the first Sunday of the month. A weather-permitting fursuit walk takes place around York, with the route as of 2023 usually visiting York Castle and the Coppergate Shopping Centre. YorkFurs was one of the last meets in the UK to operate a mini/main distinction, with smaller monthly mini-meets supplementing larger twice-yearly main meets. As of 2022, this distinction is no longer made, with all meets referred to simply as "York Monthly',
                         telegramLink: 'https://t.me/yorkfurs',
                         website: 'https://yorkshirefurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/york_furs?lang=en",
+                            bluesky: "https://bsky.app/profile/yorkfurs",
+                        },
                         lat: 53.9580,
                         lon: -1.0873,
                         communitySize: 'Medium',
@@ -264,6 +272,11 @@ const ukCommunities = {
                         description: 'The Sheffield Furmeets have been running in their current state since January 2015, the meet is staffed by eight local furries: Hikari, Hir, Lucas, Mini, Saleck, Sneeze, Sparks and Vannin. They aim to run the meets on the last Saturday of each month but this may change depending on availability of the venue, keep on eye on the socials to keep up to date with meet announcements. ',
                         telegramLink: 'https://t.me/+2MKQifrA6VQ3N2Rk',
                         website: '#',
+                        socials: { 
+                            twitter: "https://x.com/SheffieldFurs",
+                            facebook: "https://www.facebook.com/sheffieldfurmeet/?locale=en_GB",
+                            instagram: "https://www.instagram.com/sheffieldfurmeets/",
+                        },
                         lat: 53.3811,
                         lon: -1.4701,
                         communitySize: 'Medium',
@@ -281,6 +294,10 @@ const ukCommunities = {
                         description: 'Humber Furs is the furry community based in the Hull and East Yorkshire area. They organize regular social meets and events for local furries.',
                         telegramLink: 'https://t.me/humberfurs',
                         website: '#',
+                        socials:  {
+                            twitter: "https://x.com/HumberFurs",
+                            facebook: "https://www.facebook.com/Hullfurs/?locale=en_GB"
+                        },
                         lat: 53.7676,
                         lon: -0.3274,
                         communitySize: 'Medium',
@@ -298,6 +315,10 @@ const ukCommunities = {
                         description: 'ScouseFurs is the furry community based in the Liverpool and Merseyside area. They organize regular social meets and events for local furries.',
                         telegramLink: 'https://t.co/HExNtMatge',
                         website: 'https://scousefurs.co.uk',
+                        socials: {
+                            twitter: "https://x.com/ScouseFurs",
+                            instagram: "https://www.instagram.com/scousefurs/"
+                        },
                         lat: 53.4084,
                         lon: -2.9916,
                         communitySize: 'Medium',
@@ -324,6 +345,11 @@ const ukCommunities = {
                         description: 'The UK\'s largest metropolitan furry community based in London. Active community with regular social events including large ticketed events (Winter Weekender, boat party). Please note this is a 18+ meet.',
                         telegramLink: '#',
                         website: 'https://londonfurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/LondonFurs",
+                            instagram: "https://www.instagram.com/londonfurs/?hl=en",
+                            facebook: "https://www.facebook.com/groups/londonfurs/?locale=en_GB",   
+                        },
                         lat: 51.5074,
                         lon: -0.1278,
                         communitySize: 'Very Large',
@@ -352,6 +378,9 @@ const ukCommunities = {
                         description: 'Exeter and Devon furry community organising monthly meets and larger events/parties. This is a very active community with friendly and welcoming members. It is also important to note, this is a 18+ meet.',
                         telegramLink: '#',
                         website: 'https://exeterfurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/ExeterFurs",
+                        },
                         lat: 50.7184,
                         lon: -3.5339,
                         communitySize: 'Medium',
@@ -369,6 +398,10 @@ const ukCommunities = {
                         description: 'Portsmouth and South-Coast furry community. Regular monthly meets with picnic & social events.',
                         telegramLink: '#',
                         website: 'https://portsmouthfurs.uk',
+                        socials: {
+                            twitter: "https://x.com/PortsmouthFur",
+                            facebook: "https://www.facebook.com/groups/569620043069347/"
+                        },
                         lat: 50.8198,
                         lon: -1.0880,
                         communitySize: 'Medium',
@@ -385,6 +418,13 @@ const ukCommunities = {
                         name: 'Cornwall Furs',
                         description: 'Cornwall regional furry community. Irregular social meets including picnics, city-walks, and local events via Telegram coordination.',
                         telegramLink: 'https://t.me/CornwallFurs',
+                        website: "https://cornwall-furs.co.uk/",
+                        socials: {
+                            twitter: "https://x.com/Cornwall_Furs",
+                            instagram: "https://www.instagram.com/cornwallfurs1/",
+                            discord: "https://discord.com/invite/jwkthp6ueY",
+                            facebook: "https://www.facebook.com/groups/cornwallfurs/"
+                        },
                         lat: 50.2632,
                         lon: -5.0530,
                         communitySize: 'Medium',
