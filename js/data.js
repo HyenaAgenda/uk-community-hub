@@ -33,6 +33,10 @@ const ukCommunities = {
                         name: 'Swansea Furs',
                         description: 'Swansea and South Wales furry community. Regular meets and social events organized via Telegram group.',
                         telegramLink: 'https://t.me/swanseafurs',
+                        website: '#',
+                        socials: {
+                            twitter: "https://x.com/swanseafurs",
+                        },
                         lat: 51.6214,
                         lon: -3.9436,
                         communitySize: 'Medium',
@@ -73,6 +77,9 @@ const ukCommunities = {
                         description: 'Relativily new group in the Wolverhampton and the Black Country region with informal meets and planned meets in future. It is a very friendly and welcoming group maing it great for newcomers and regular members who want a relaxing enviroment to chill and be themselves. Note future meets will be 18+',
                         telegramLink: 't.me/yamfurs',
                         website: 'https://wolverhamptonfurs.com/',
+                        socials: {
+                            twitter: "https://x.com/yamfurs",
+                        },
                         lat: 52.5869,
                         lon: -2.1280,
                         communitySize: 'Medium',
@@ -90,6 +97,10 @@ const ukCommunities = {
                         description: 'Birmingham furry community. Monthly meets with pre-meet, main meet, and fursuit walk. Fursuit-friendly venue with changing/storage.',
                         telegramLink: '#',
                         website: 'https://www.birminghamfurs.uk/',
+                        socials: {
+                            twitter: "https://x.com/BrumFurs",
+                            facebook: "https://www.facebook.com/groups/Brumfurs/?locale=en_GB"
+                        },
                         lat: 52.4862,
                         lon: -1.8904,
                         communitySize: 'Large',
@@ -101,6 +112,9 @@ const ukCommunities = {
                         description: 'Coventry furry community. Regular meets and social events for the wider Midlands network.',
                         telegramLink: '#',
                         website: 'https://covfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/CovFurs",
+                        },
                         lat: 52.4068,
                         lon: -1.5197,
                         communitySize: 'Medium',
@@ -122,8 +136,13 @@ const ukCommunities = {
                         id: 'nottingham-furs',
                         name: 'Notts Furs',
                         description: 'Nottingham furry community organizing regular meets and social events in the East Midlands area.',
-                        telegramLink: '',
+                        telegramLink: '#',
                         website: '#',
+                        socials: {
+                            twitter: "https://x.com/FursNottingham",
+                            facebook: "https://www.facebook.com/groups/nottsfurs/",
+                            instagram: "https://www.instagram.com/nottsfurs/"
+                        },
                         lat: 52.9548,
                         lon: -1.1581,
                         communitySize: 'Medium',
@@ -148,6 +167,9 @@ const ukCommunities = {
                         description: 'Manchester\'s vibrant furry community. One of the UK\'s most active communities with regular meetups held on the second weekend of every month. located in the heart pf the Gay Village, this meet is set in a very welcoming, friendly and casual enviroment which offers a great experience for both regular attendees and newcomers. Note this is a 18+ meet with ID required to enter the Bar.',
                         telegramLink: '#',
                         website: 'https://www.mancfurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/MancFurs",
+                        },
                         lat: 53.4808,
                         lon: -2.2426,
                         communitySize: 'Large',
@@ -165,6 +187,11 @@ const ukCommunities = {
                         description: 'Newcastle and Northeast England furry community. Regular meets and social events organized via Telegram group and posted on official website, this is a 16+ furmeet.',
                         telegramLink: 'https://t.me/NewcastleFurs',
                         website: 'https://ne-furs.co.uk/',
+                        socials: {
+                            instagram: "https://www.instagram.com/nefurmeets/",
+                            twitter: "https://x.com/NEFurmeets",
+                            facebook: "https://www.facebook.com/groups/243258722743900/?locale=en_GB"
+                        },
                         lat: 54.9783,
                         lon: -1.6174,
                         communitySize: 'Medium',
@@ -182,6 +209,10 @@ const ukCommunities = {
                         description: 'Leeds furry community organizing local meets and socials across the region. The events gather at Leeds train station from 11:30-11:45 on meet days, before walking to the meet venue at 11:45. They usually feature drinking, playing pool and socialising, with a weather-permitting fursuit walk taking place around the city centre. The venue provides for a dedicated and discrete fursuit-changing room along with a place to safely store suitcases and other luggage. Current Staff : Wolfie, Lupestripe, Tonks, Bazil Cat, Lynden, Shiro Sirius, Arcais, Azzie, Ares, Urban, Stray Jim, Ell, Fnord, Xantin, SouthPaw, Whiskian Wye, FluffyFlower, Rutan the Qilian',
                         telegramLink: '#',
                         website: 'https://leedsfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/LeedsFurs",
+                            instagram: "https://www.instagram.com/leedsfurs/?hl=en  "
+                        },
                         lat: 53.8008,
                         lon: -1.5491,
                         communitySize: 'Large',
