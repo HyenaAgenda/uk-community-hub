@@ -70,7 +70,7 @@ const ukCommunities = {
                 groups: [
                     {
                         id: 'birmingham-furs',
-                        name: 'Birmingham FurS',
+                        name: 'Birmingham Furs',
                         description: 'Birmingham furry community. Monthly meets with pre-meet, main meet, and fursuit walk. Fursuit-friendly venue with changing/storage.',
                         telegramLink: '#',
                         website: 'https://www.birminghamfurs.uk/',
