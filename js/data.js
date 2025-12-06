@@ -67,14 +67,14 @@ const ukCommunities = {
                     {
                         id: 'aberfurs',
                         name: 'AberFurs (CYM)',
-                        description: 'Aberystwyth / Ceredigion furry community (AberFurs). Local meets and social groups across mid-Wales.',
+                        description: 'Aberystwyth / Ceredigion furry community (AberFurs). Local meets and social groups across mid-Wales. No major presence anymore or recent organisation of events',
                         telegramLink: '#',
                         lat: 52.4153,
                         lon: -4.0826,
                         communitySize: 'Unknown',
-                        active: true,
+                        active: false,
                         expectations: {
-                            events: true,
+                            events: false,
                             chats: true,
                             art: true,
                             community: true
