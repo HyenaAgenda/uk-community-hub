@@ -155,6 +155,23 @@ const ukCommunities = {
                     }
                 ]
             },
+            'newcastle': {
+                name: 'Newcastle',
+                county: 'Tyne and Wear',
+                groups: [
+                    {
+                        id: 'newcastlefurs',
+                        name: 'NewcastleFurs',
+                        description: 'Newcastle and Northeast England furry community. Regular meets and social events organized via Telegram group and posted on official website, this is a 16+ furmeet.',
+                        telegramLink: 'https://t.me/NewcastleFurs',
+                        website: 'https://ne-furs.co.uk/',
+                        lat: 54.9783,
+                        lon: -1.6174,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            },
             'leeds': {
                 name: 'Leeds',
                 county: 'West Yorkshire',
