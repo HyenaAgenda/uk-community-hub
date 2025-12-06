@@ -564,9 +564,14 @@ const ukCommunities = {
                     {
                         id: 'glasgow-furs',
                         name: 'Glasgow Furs',
-                        description: 'Glasgow Furs is the centre of the West Scotland furry community. Meet schedule and details are available on their website and in their telegram/discord groups. This makes up one of the largest communitys of furries in Scotland. They have a active Telegram and Discord Server. There discord can be found at https://discord.gg/3DGhje82ms',
+                        description: 'Glasgow Furs is the centre of the West Scotland furry community. Meet schedule and details are available on their website and in their telegram/discord groups. This makes up one of the largest communitys of furries in Scotland. They have a active Telegram and Discord Server.',
                         telegramLink: 'https://t.me/Glasgowfur',
                         website: 'https://glasgowfurs.scot/',
+                        socials: {
+                            discord: "https://discord.gg/3DGhje82ms",
+                            twitter: "https://x.com/Glasgowfurs",
+                        },
+
                         lat: 55.8642,
                         lon: -4.2518,
                         communitySize: 'Medium',
