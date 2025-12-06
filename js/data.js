@@ -515,6 +515,23 @@ const ukCommunities = {
                     }
                 ]
             },
+            'peterborough': {
+                name: 'Peterborough',
+                county: 'Cambridgeshire',
+                groups: [
+                    {
+                        id: 'peterborough-furs',
+                        name: 'Peterborough Furs',
+                        description: 'Peterborough furry community organizing local meets and socials across the region.',
+                        telegramLink: '#',
+                        website: '#',
+                        lat: 52.5733,
+                        lon: -0.2417,
+                        communitySize: 'Small',
+                        active: false
+                    }
+                ]
+            },
             'kent': {
                 name: 'Kent',
                 county: 'South East',
