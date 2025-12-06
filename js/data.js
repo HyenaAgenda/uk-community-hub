@@ -752,7 +752,7 @@ const ukCommunities = {
                         },
                         lat: 50.9097,
                         lon: -1.4044,
-                        communitySize: 'Large',
+                        communitySize: 'Medium',
                         active: true,
                         expectations: {
                             events: false,
