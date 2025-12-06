@@ -522,7 +522,7 @@ const ukCommunities = {
                     {
                         id: 'peterborough-furs',
                         name: 'Peterborough Furs',
-                        description: 'Peterborough furry community organizing local meets and socials across the region.',
+                        description: 'Peterborough furry community organizing local meets and socials across the region. The Twitter account has been inactive since 2022 so its unlikely official meets are organised however here are smaller groups of furs in the city and surrounding area',
                         telegramLink: '#',
                         website: '#',
                         lat: 52.5733,
