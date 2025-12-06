@@ -716,7 +716,7 @@ const ukCommunities = {
                         id: 'bristol-furs',
                         name: 'Bristol Furs',
                         description: 'Bristol furry community. First weekend of every month (Saturday) at a lovely venue. The community is very active and very welcoming to new members. Its location and excellent staff offer a great environment for both new and regular furries to meet and socialise. This meet is 18+',
-                        telegramLink: '#',
+                        telegramLink: 'https://t.me/BristolFurs',
                         website: 'https://bristolfurs.co.uk/',
                         socials: {
                             twitter: "https://x.com/BristolFurs",
