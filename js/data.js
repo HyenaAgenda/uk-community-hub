@@ -320,7 +320,7 @@ const ukCommunities = {
                     {
                         id: 'bristol-furs',
                         name: 'Bristol Furs',
-                        description: 'Bristol furry community. First weekend of every month (Saturday) at various venues.   ',
+                        description: 'Bristol furry community. First weekend of every month (Saturday) at a lovely venue.   ',
                         telegramLink: '#',
                         website: 'https://bristolfurs.co.uk/',
                         lat: 51.4545,
