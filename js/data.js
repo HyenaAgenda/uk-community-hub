@@ -208,7 +208,7 @@ const ukCommunities = {
                 ]
             },
             'hull': {
-                name: 'Humber Furs',
+                name: 'Hull',
                 county: 'East Yorkshire',
                 groups: [
                     {
@@ -219,6 +219,23 @@ const ukCommunities = {
                         website: '#',
                         lat: 53.7676,
                         lon: -0.3274,
+                        communitySize: 'Medium',
+                        active: true
+                    }
+                ]
+            },
+            'liverpool': {
+                name: 'Liverpool',
+                county: 'Merseyside',
+                groups: [
+                    {
+                        id: 'scouse-furs',
+                        name: 'ScouseFurs',
+                        description: 'ScouseFurs is the furry community based in the Liverpool and Merseyside area. They organize regular social meets and events for local furries.',
+                        telegramLink: 'https://t.co/HExNtMatge',
+                        website: 'https://scousefurs.co.uk',
+                        lat: 53.4084,
+                        lon: -2.9916,
                         communitySize: 'Medium',
                         active: true
                     }
