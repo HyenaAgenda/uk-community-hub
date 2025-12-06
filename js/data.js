@@ -353,7 +353,7 @@ const ukCommunities = {
                     {
                         id: 'plymouth-furs',
                         name: 'PlymouthFurs',
-                        description: 'Plymouth and South Devon furry community. Local meets and social events.',
+                        description: 'PlymouthFurs is a regional furry group centered around the city of Plymouth in the United Kingdom. It also covers a majority of the Devon and Cornwall area. They hold monthly fur-meets on the last Saturday of every month. Current Staff: Aconight, theonecanine, Nitwolf112, TkkAttack, Kloof, Chili',
                         telegramLink: '#',
                         website: 'https://x.com/PlymouthFurs',
                         lat: 50.3755,
