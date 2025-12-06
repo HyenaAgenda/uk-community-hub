@@ -469,6 +469,11 @@ const ukCommunities = {
                         description: 'Brighton and East Sussex furry community.',
                         telegramLink: '#',
                         website: 'https://www.sussexfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/sussexfurs",
+                            instagram: "https://www.instagram.com/sussex_furs/",
+                            facebook: "https://www.facebook.com/groups/SussexFurs/",
+                        },
                         lat: 50.8659,
                         lon: -0.0833,
                         communitySize: 'Small',
@@ -486,6 +491,12 @@ const ukCommunities = {
                         description: 'Berkshire Furs is a local furry group for Berkshire and surrounding areas in the United Kingdom. As of September 2025, the Telegram group has over 475 members.As of 2025, the staff of Berkshire Furs are as follows: Shadow Raccoon,Bon Pansky,Leda,Washu,Draegarth,Tungro',
                         telegramLink: 'https://t.me/JoinBerkshireFurs',
                         website: 'https://www.berkshirefurs.org.uk/',
+                        socials: {
+                            twitter: "https://x.com/BerkshireFurs",
+                            instagram: "https://www.instagram.com/berkshirefurs/",
+                            facebook: "https://www.facebook.com/groups/berkshirefurs/?locale=en_GB",
+                            youtube: "https://www.youtube.com/channel/UC6E_dnEjKk4bMbAQCdhYoRw/about"
+                        },
                         lat: 51.4543,
                         lon: -0.9781,
                         communitySize: 'Large',
@@ -522,6 +533,10 @@ const ukCommunities = {
                         description: 'Bristol furry community. First weekend of every month (Saturday) at a lovely venue. The community is very active and very welcoming to new members. Its location and excellent staff offer a great environment for both new and regular furries to meet and socialise. This meet is 18+',
                         telegramLink: '#',
                         website: 'https://bristolfurs.co.uk/',
+                        socials: {
+                            twitter: "https://x.com/BristolFurs",
+                            facebook: "https://www.facebook.com/groups/BristolFurs/?locale=en_GB"
+                        },
                         lat: 51.4545,
                         lon: -2.5879,
                         communitySize: 'Medium',
