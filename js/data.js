@@ -559,7 +559,7 @@ const ukCommunities = {
                     {
                         id: 'cornwall-furs',
                         name: 'Cornwall Furs',
-                        description: 'Cornwall regional furry community. Irregular social meets including picnics, city-walks, and local events via Telegram coordination.',
+                        description: 'Cornwall regional furry community. Regular social meets including a main regular fur meet, and local events via Telegram coordination.',
                         telegramLink: 'https://t.me/CornwallFurs',
                         website: "https://cornwall-furs.co.uk/",
                         socials: {
