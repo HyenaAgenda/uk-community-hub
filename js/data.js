@@ -104,9 +104,9 @@ const ukCommunities = {
                 groups: [
                     {
                         id: 'nottingham-furs',
-                        name: 'NottsFurs',
+                        name: 'Notts Furs',
                         description: 'Nottingham furry community organizing regular meets and social events in the East Midlands area.',
-                        telegramLink: 'https://t.co/f42qc57Wtp',
+                        telegramLink: '',
                         website: '#',
                         lat: 52.9548,
                         lon: -1.1581,
@@ -215,7 +215,7 @@ const ukCommunities = {
                         id: 'humber-furs',
                         name: 'Humber Furs',
                         description: 'Humber Furs is the furry community based in the Hull and East Yorkshire area. They organize regular social meets and events for local furries.',
-                        telegramLink: '#',
+                        telegramLink: 'https://t.me/humberfurs',
                         website: '#',
                         lat: 53.7676,
                         lon: -0.3274,
@@ -224,6 +224,10 @@ const ukCommunities = {
                     }
                 ]
             },
+        }
+    },
+
+
 
     // England - South & South-West
     'south-england': {
