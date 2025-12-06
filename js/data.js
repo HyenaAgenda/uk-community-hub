@@ -156,9 +156,9 @@ const ukCommunities = {
                 groups: [
                     {
                         id: 'yorkfur',
-                        name: 'YorkFur',
-                        description: 'Yorkshire furry community hosting an annual event. Requires ID for 18+ age verification.',
-                        telegramLink: '#',
+                        name: 'YorkFurs',
+                        description: 'YorkFurs refers to the community of furries and their meet-ups in the city of York, UK. Meets are run monthly, traditionally on the first weekend of the month. The meets have been run since at least 2006 and have taken place at various venues across the city. As of 2023, meets take place at SPARK on the first Sunday of the month. A weather-permitting fursuit walk takes place around York, with the route as of 2023 usually visiting York Castle and the Coppergate Shopping Centre. YorkFurs was one of the last meets in the UK to operate a mini/main distinction, with smaller monthly mini-meets supplementing larger twice-yearly main meets. As of 2022, this distinction is no longer made, with all meets referred to simply as "York Monthly',
+                        telegramLink: 'https://t.me/yorkfurs',
                         website: 'https://yorkshirefurs.org.uk/',
                         lat: 53.9580,
                         lon: -1.0873,
