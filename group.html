@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Group - UK Furry Community Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-bg">
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-paw"></i>
+                <span>UK Furry Community Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/#find-community">Find Community</a>
+            </div>
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/#find-community">Find Community</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Communities</a></li>
+                <li class="breadcrumb-item"><span id="breadcrumb-city">Loading...</span></li>
+                <li class="breadcrumb-item active"><span id="breadcrumb-group">Group</span></li>
+            </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="group-hero">
+            <div class="group-hero-content">
+                <div class="group-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h1 id="group-name">Loading...</h1>
+                <p class="group-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="group-location">Location</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="group-container">
+            <!-- Main Content -->
+            <div class="group-main-content">
+                <!-- About Section -->
+                <div class="about-section">
+                    <h2><i class="fas fa-info-circle"></i> About This Community</h2>
+                    <p id="group-description">Loading group information...</p>
+                </div>
+
+                <!-- What to Expect Section -->
+                <div class="expect-section">
+                    <h2><i class="fas fa-sparkles"></i> What to Expect</h2>
+                    <div class="expect-grid">
+                        <div class="expect-card">
+                            <div class="expect-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Community Events</h3>
+                            <p>Meet fellow furs and attend local meetups and events</p>
+                        </div>
+                        <div class="expect-card">
+                            <div class="expect-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Active Chats</h3>
+                            <p>Daily conversations and sharing on Telegram</p>
+                        </div>
+                        <div class="expect-card">
+                            <div class="expect-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Art Sharing</h3>
+                            <p>Share your art, fursuit, and creative works</p>
+                        </div>
+                        <div class="expect-card">
+                            <div class="expect-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Friendly Community</h3>
+                            <p>Everyone is welcome, judgment-free environment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guidelines Section -->
+                <div class="guidelines-section">
+                    <h2><i class="fas fa-shield-alt"></i> Community Guidelines</h2>
+                    <h3 style="color: #1f2937; font-size: 1.05rem; margin-bottom: 1rem;">When Joining, Please Remember:</h3>
+                    <ul class="guidelines-list">
+                        <li class="guidelines-item">
+                            <i class="fas fa-check"></i>
+                            <span>Respect everyone's boundaries and consent</span>
+                        </li>
+                        <li class="guidelines-item">
+                            <i class="fas fa-check"></i>
+                            <span>Be inclusive and welcoming to all</span>
+                        </li>
+                        <li class="guidelines-item">
+                            <i class="fas fa-check"></i>
+                            <span>Keep adult content appropriate to the venue</span>
+                        </li>
+                        <li class="guidelines-item">
+                            <i class="fas fa-check"></i>
+                            <span>Ask before taking photos or physical contact</span>
+                        </li>
+                        <li class="guidelines-item">
+                            <i class="fas fa-check"></i>
+                            <span>Follow the group's specific rules and guidelines</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="group-sidebar">
+                <!-- Stats Card -->
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">
+                            <i class="fas fa-users"></i>
+                            Community Size
+                        </span>
+                        <span class="stat-value" id="group-members">Unknown</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">
+                            <i class="fas fa-circle"></i>
+                            Status
+                        </span>
+                        <span style="color: #10b981; font-weight: 600;">Active</span>
+                    </div>
+                </div>
+
+                <!-- Join Button -->
+                <div class="join-button-container">
+                    <a id="join-link" href="#" target="_blank" class="join-button">
+                        <i class="fab fa-telegram"></i>
+                        Join on Telegram
+                    </a>
+                </div>
+
+                <!-- Website Button (if available) -->
+                <div id="website-button-container" class="join-button-container" style="display: none;">
+                    <a id="website-link" href="#" target="_blank" class="join-button" style="background-color: #3b82f6;">
+                        <i class="fas fa-globe"></i>
+                        Visit Website
+                    </a>
+                </div>
+
+                <!-- QR Code Section -->
+                <div class="qr-section">
+                    <h3>Quick Join</h3>
+                    <div class="qr-code" id="qr-code">
+                        <p class="qr-text">QR Code loading...</p>
+                    </div>
+                    <p class="qr-text">Scan with your phone to join</p>
+                </div>
+
+                <!-- Community Socials Section -->
+                <div class="share-section">
+                    <h3><i class="fas fa-share-alt"></i> Community Socials</h3>
+                    <div id="socials-container" class="share-buttons">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Groups Section -->
+        <section class="related-section">
+            <h2><i class="fas fa-compass"></i> Other Communities in This Area</h2>
+            <div id="related-groups" class="related-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UK Furry Community Hub</h3>
+                <p>Connecting furry communities across the United Kingdom</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/#find-community">Find Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <p>For community inquiries and suggestions, contact local group admins</p>
+        <div class="footer-section">
+            <h3>Made By</h3>
+            <p>Built with <i class="fas fa-code" style="color: #a855f7;"></i> by <a href="https://hyena-industries.com/" style="color: #a855f7; text-decoration: none; font-weight: 600;">Hyena Industries</a></p>
+        </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UK Furry Community Hub. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> for the UK furry community.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Load group information
+        document.addEventListener('DOMContentLoaded', function() {
+            const groupId = getUrlParameter('id');
+            const group = findGroupById(groupId);
+            
+            if (!group) {
+                document.querySelector('.group-container').innerHTML = '<div style="text-align: center; padding: 3rem; color: #6b7280;"><h1 style="color: #1f2937; margin-bottom: 1rem;">Community not found</h1><a href="/" style="color: #a855f7;">Return to communities</a></div>';
+                return;
+            }
+            
+            // Update page content
+            document.title = group.name + ' - UK Furry Community Hub';
+            document.getElementById('group-name').textContent = group.name;
+            document.getElementById('group-location').textContent = group.city + ', ' + group.county;
+            document.getElementById('group-description').textContent = group.description;
+            document.getElementById('group-members').textContent = group.communitySize;
+            document.getElementById('breadcrumb-city').textContent = group.city;
+            document.getElementById('breadcrumb-group').textContent = group.name;
+            
+            // Set join link — if missing, go to no-socials page so users can report the missing link
+            const joinLink = document.getElementById('join-link');
+            if (group.telegramLink && group.telegramLink !== '#' && group.telegramLink.trim() !== '') {
+                joinLink.href = group.telegramLink;
+                joinLink.target = '_blank';
+                // Show QR code only if we have a valid Telegram link
+                document.getElementById('qr-code').innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(group.telegramLink)}" alt="Join ${group.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 10px;">`;
+            } else {
+                // link to no-socials page with group id so admins can identify it
+                joinLink.href = `/no-socials?id=${encodeURIComponent(group.id)}`;
+                joinLink.removeAttribute('target');
+                joinLink.textContent = '';
+                joinLink.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Telegram Group Not Found';
+                // Hide QR code if no telegram link
+                document.getElementById('qr-code').innerHTML = '<p class="qr-text" style="text-align: center; color: #6b7280;">QR code unavailable</p>';
+            }
+            
+            // Set website link if available
+            if (group.website && group.website.trim() !== '') {
+                document.getElementById('website-button-container').style.display = 'block';
+                document.getElementById('website-link').href = group.website;
+                document.getElementById('website-link').target = '_blank';
+            }
+            
+            // Load related groups
+            const allCommunities = getAllCommunities();
+            const relatedGroups = allCommunities.filter(g => g.city === group.city && g.id !== groupId).slice(0, 3);
+            
+            let relatedHtml = '';
+            if (relatedGroups.length === 0) {
+                relatedHtml = '<p style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #6b7280;">No other communities in this area yet</p>';
+            } else {
+                relatedGroups.forEach(relatedGroup => {
+                    relatedHtml += `
+                        <a href="/group?id=${relatedGroup.id}" class="related-card">
+                            <div class="related-card-title">${relatedGroup.name}</div>
+                            <div class="related-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${relatedGroup.city}
+                            </div>
+                            <div class="related-card-members">
+                                <i class="fas fa-users"></i>
+                                ${relatedGroup.communitySize}
+                            </div>
+                        </a>`;
+                });
+            }
+            
+            document.getElementById('related-groups').innerHTML = relatedHtml;
+            
+            // Populate socials section
+            const socialsContainer = document.getElementById('socials-container');
+            const socials = group.socials || {};
+            const socialPlatforms = [
+                { key: 'discord', icon: 'fab fa-discord', label: 'Discord' },
+                { key: 'twitter', icon: 'fab fa-twitter', label: 'Twitter' },
+                { key: 'instagram', icon: 'fab fa-instagram', label: 'Instagram' },
+                { key: 'facebook', icon: 'fab fa-facebook', label: 'Facebook' },
+                { key: 'reddit', icon: 'fab fa-reddit', label: 'Reddit' },
+                { key: 'youtube', icon: 'fab fa-youtube', label: 'YouTube' }
+            ];
+            
+            let hasSocials = false;
+            let socialsHtml = '';
+            
+            socialPlatforms.forEach(platform => {
+                if (socials[platform.key]) {
+                    hasSocials = true;
+                    socialsHtml += `
+                        <a href="${escapeHtmlAttr(socials[platform.key])}" target="_blank" class="share-button" title="${platform.label}">
+                            <i class="${platform.icon}"></i>
+                            <span>${platform.label}</span>
+                        </a>`;
+                }
+            });
+            
+            if (!hasSocials) {
+                // No socials found, show message and link to no-socials page
+                socialsHtml = `
+                    <div style="text-align: center; padding: 1rem; color: #6b7280;">
+                        <p style="margin-bottom: 1rem;">Social links not available yet</p>
+                        <a href="/no-socials?id=${encodeURIComponent(group.id)}" class="share-button" style="display: inline-block;">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Help Us Update</span>
+                        </a>
+                    </div>`;
+            }
+            
+            socialsContainer.innerHTML = socialsHtml;
+        });
+        
+        function escapeHtmlAttr(str) {
+            if (!str && str !== 0) return '';
+            return String(str).replace(/[&<>"']/g, function(s) {
+                return ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#39;'
+                })[s];
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Furry Community Hub - Local Furry Communities Across the UK</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-paw"></i>
+                    <span class="logo-text">UK Furry Community Hub</span>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about" class="nav-link">About Us</a>
+                    <a href="#find-community" class="nav-link">Find Community</a>
+                </div>
+                <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="#find-community">Find Community</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">UK Furry Community Hub</h1>
+                <p class="hero-subtitle">Discover and connect with furry communities across the United Kingdom</p>
+                <a href="#find-community" class="cta-button">
+                    <i class="fas fa-search"></i>
+                    Find Your Community
+                </a>
+            </div>
+        </section>
+
+        <!-- Find Community Section -->
+        <section id="find-community" class="find-community">
+            <div class="container">
+                <h2 class="section-title">Find Your Local Community</h2>
+                <p style="text-align: center; color: #6b7280; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Browse communities by region or search for your local area
+                </p>
+                
+                <div class="search-container">
+                    <!-- Search/Filter Sidebar -->
+                    <div class="search-sidebar">
+                        <input 
+                            type="text" 
+                            id="region-search" 
+                            placeholder="Search communities..." 
+                        >
+                        <div id="region-list">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map (Leaflet) -->
+                    <div class="map-container">
+                        <div id="map" style="width:100%; height:500px; border-radius:10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Join a Local Community?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Meet Local Furs</h3>
+                        <p>Connect with fellow furries in your area and build meaningful friendships</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Local Meetups</h3>
+                        <p>Discover and attend fursuit meets, conventions, and social events</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Active Chat</h3>
+                        <p>Join Telegram groups to chat, share art, and stay updated on community news</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-paw" style="color: #a855f7; margin-right: 0.5rem;"></i>UK Furry Community Hub</h3>
+                    <p>Connecting furry communities across the United Kingdom</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="#find-community">Find Community</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <p>For community inquiries and suggestions, contact local group admins through their Telegram groups.</p>
+                <div class="footer-section">
+                    <h3>Made By</h3>
+                    <p>Built with <i class="fas fa-code" style="color: #a855f7;"></i> by <a href="https://hyena-industries.com/" style="color: #a855f7; text-decoration: none; font-weight: 600;">Hyena Industries</a></p>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UK Furry Community Hub. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> for the UK furry community by a Hyena :3
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
