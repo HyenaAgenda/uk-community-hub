@@ -150,6 +150,3 @@ The website is optimized for:
 
 
 
----
-
-**Wolverhampton & Black Country Furs** - Connecting local furries since 2024 🐾
