@@ -263,6 +263,34 @@ const ukCommunities = {
                 ]
             },
 
+            'lancaster': {
+                name: 'Lancaster',
+                county: 'Lancashire',
+                groups: [
+                    {
+                        id: 'lancaster-furs',
+                        name: 'Lancaster Furs',
+                        description: 'Lancaster furs is a small but friendly commiunity based in Lancashire near the lake district. Primarily on discord it seems at the moment, the discord itself is not a NSFW discord but it is 18+ only.',
+                        telegramLink: '#',
+                        website: '#',
+                        socials: {
+                            discord: "https://discord.gg/narxckW8CP"
+
+                        },
+                        lat: 54.0470,
+                        lon: -2.8014,
+                        communitySize: 'Small',
+                        active: true,
+                        expectations: {
+                            events: false,
+                            chats: true,
+                            art: true,
+                            community: true
+                        },
+                    }
+                ]
+            },
+
             'warrington': {
                 name: 'Warrington',
                 county: 'Cheshire',
