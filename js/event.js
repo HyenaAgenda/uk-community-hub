@@ -5,9 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
         });
     }
+
+    // Close mobile menu when a link is clicked
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.remove('active');
+        });
+    });
 
     const eventId = getUrlParameter('id');
     const event = findEventById(eventId);
