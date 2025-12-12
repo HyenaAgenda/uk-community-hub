@@ -75,21 +75,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const L = window.L;
             const map = L.map('map').setView(regionCoords['South England'], 6);
 
+            window.ukfMap = map;
+
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
 
-            // Function to add per-group markers using MarkerCluster
-            function addGroupMarkers() {
+            // Function to add per-group + per-event markers using MarkerCluster
+            function addMarkers() {
                 try {
-                    // Ensure getAllCommunities exists
-                    if (typeof getAllCommunities !== 'function') return;
-
-                    const allGroups = getAllCommunities();
+                    const markerIndex = new Map();
+                    window.ukfMarkerIndex = markerIndex;
 
                     // create cluster group
                     const clusterGroup = L.markerClusterGroup ? L.markerClusterGroup() : null;
+                    window.ukfClusterGroup = clusterGroup;
 
                     // fallback coords if group missing lat/lon
                     const defaultCenter = [54.0, -2.0];
@@ -108,44 +109,106 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const allMarkers = [];
 
-                    allGroups.forEach(group => {
-                        let lat = parseFloat(group.lat);
-                        let lon = parseFloat(group.lon);
-
-                        if (isNaN(lat) || isNaN(lon)) {
-                            // try to use region center
-                            const rc = regionCoords[group.region] || defaultCenter;
-                            lat = rc[0];
-                            lon = rc[1];
-                        }
-
-                        // Create a colored marker icon based on region (normalize region names)
-                        const regionKey = (group.region || '').toString().toLowerCase();
-                        const regionColor = regionColors[regionKey] || regionColors[group.region] || '#6b7280';
-                        const markerIcon = L.divIcon({
-                            html: `<div style="background-color: ${regionColor}; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
-                            iconSize: [24, 24],
-                            className: 'custom-marker'
-                        });
-
-                        const marker = L.marker([lat, lon], { icon: markerIcon });
-                        allMarkers.push([lat, lon]);
-
-                        const popupHtml = `
-                            <div style="min-width:150px">
-                                <strong>${escapeHtml(group.name)}</strong><br/>
-                                <small>${escapeHtml(group.city || '')}${group.county ? ', ' + escapeHtml(group.county) : ''}</small>
-                                <div style="margin-top:8px"><a href="group.html?id=${encodeURIComponent(group.id)}">View profile</a></div>
-                            </div>`;
-
-                        marker.bindPopup(popupHtml);
-
+                    function addMarkerToLayer(marker) {
                         if (clusterGroup) {
                             clusterGroup.addLayer(marker);
                         } else {
                             marker.addTo(map);
                         }
-                    });
+                    }
+
+                    // Groups
+                    if (typeof getAllCommunities === 'function') {
+                        const allGroups = getAllCommunities();
+
+                        allGroups.forEach(group => {
+                            let lat = parseFloat(group.lat);
+                            let lon = parseFloat(group.lon);
+
+                            if (isNaN(lat) || isNaN(lon)) {
+                                // try to use region center
+                                const rc = regionCoords[group.region] || defaultCenter;
+                                lat = rc[0];
+                                lon = rc[1];
+                            }
+
+                            // Create a colored marker icon based on region (normalize region names)
+                            const regionKey = (group.region || '').toString().toLowerCase();
+                            const regionColor = regionColors[regionKey] || regionColors[group.region] || '#6b7280';
+                            const markerIcon = L.divIcon({
+                                html: `<div style="background-color: ${regionColor}; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+                                iconSize: [24, 24],
+                                className: 'custom-marker'
+                            });
+
+                            const marker = L.marker([lat, lon], { icon: markerIcon });
+                            allMarkers.push([lat, lon]);
+                            markerIndex.set(`group:${group.id}`,
+                                marker
+                            );
+
+                            const popupHtml = `
+                                <div style="min-width:150px">
+                                    <strong>${escapeHtml(group.name)}</strong><br/>
+                                    <small>${escapeHtml(group.city || '')}${group.county ? ', ' + escapeHtml(group.county) : ''}</small>
+                                    <div style="margin-top:8px"><a href="group.html?id=${encodeURIComponent(group.id)}">View profile</a></div>
+                                </div>`;
+
+                            marker.bindPopup(popupHtml);
+
+                            addMarkerToLayer(marker);
+                        });
+                    }
+
+                    // Events
+                    if (typeof getAllEvents === 'function') {
+                        const allEvents = getAllEvents();
+
+                        const eventTypeColors = {
+                            convention: '#0ea5e9',
+                            meetup: '#22c55e',
+                            conference: '#f97316',
+                            event: '#a855f7',
+                            party: '#a855f7',
+                            rave: '#a855f7',
+                            nightclub: '#ec4899',
+                            default: '#64748b'
+                        };
+
+                        allEvents.forEach(evt => {
+                            let lat = parseFloat(evt.lat);
+                            let lon = parseFloat(evt.lon);
+
+                            if (isNaN(lat) || isNaN(lon)) {
+                                const rc = regionCoords[evt.region] || defaultCenter;
+                                lat = rc[0];
+                                lon = rc[1];
+                            }
+
+                            const typeKey = (evt.type || '').toString().toLowerCase().trim();
+                            const color = eventTypeColors[typeKey] || eventTypeColors.default;
+
+                            const markerIcon = L.divIcon({
+                                html: `<div style="background-color: ${color}; width: 22px; height: 22px; border-radius: 6px; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+                                iconSize: [22, 22],
+                                className: 'custom-marker'
+                            });
+
+                            const marker = L.marker([lat, lon], { icon: markerIcon });
+                            allMarkers.push([lat, lon]);
+                            markerIndex.set(`event:${evt.id}`, marker);
+
+                            const popupHtml = `
+                                <div style="min-width:150px">
+                                    <strong>${escapeHtml(evt.name)}</strong><br/>
+                                    <small>${escapeHtml(evt.city || '')}${evt.county ? ', ' + escapeHtml(evt.county) : ''}</small>
+                                    <div style="margin-top:8px"><a href="event.html?id=${encodeURIComponent(evt.id)}">View details</a></div>
+                                </div>`;
+                            marker.bindPopup(popupHtml);
+
+                            addMarkerToLayer(marker);
+                        });
+                    }
 
                     if (clusterGroup) map.addLayer(clusterGroup);
 
@@ -161,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Load markercluster if necessary, then add markers
             if (window.L && window.L.markerClusterGroup) {
-                addGroupMarkers();
+                addMarkers();
             } else {
                 // dynamically load markercluster CSS and JS
                 const mcCss = document.createElement('link');
@@ -178,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mcScript.src = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster-src.js';
                 mcScript.onload = function() {
                     // small delay to ensure plugin attaches
-                    setTimeout(addGroupMarkers, 50);
+                    setTimeout(addMarkers, 50);
                 };
                 document.body.appendChild(mcScript);
             }
@@ -202,6 +265,33 @@ document.addEventListener('DOMContentLoaded', function() {
         initLeaflet();
     }
 });
+
+// Focus a marker on the home page map and open its popup.
+// kind: 'group' | 'event'
+function focusItemOnMap(kind, id) {
+    try {
+        const map = window.ukfMap;
+        const markerIndex = window.ukfMarkerIndex;
+        if (!map || !markerIndex) return;
+
+        const marker = markerIndex.get(`${kind}:${id}`);
+        if (!marker) return;
+
+        const clusterGroup = window.ukfClusterGroup;
+        const open = () => {
+            map.setView(marker.getLatLng(), Math.max(map.getZoom(), 10));
+            marker.openPopup();
+        };
+
+        if (clusterGroup && typeof clusterGroup.zoomToShowLayer === 'function') {
+            clusterGroup.zoomToShowLayer(marker, open);
+        } else {
+            open();
+        }
+    } catch (err) {
+        console.error('Error focusing marker:', err);
+    }
+}
 
 // Utility function to get URL parameters
 function getUrlParameter(name) {

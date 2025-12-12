@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Furry Community Hub - Local Furry Communities Across the UK</title>
+    <title>UK Furry Community Hub - Furry Events & Conventions</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 </head>
 <body>
     <!-- Navigation Header -->
@@ -20,7 +23,8 @@
                 <div class="nav-links">
                     <a href="/" class="nav-link">Home</a>
                     <a href="/about" class="nav-link">About Us</a>
-                    <a href="#find-community" class="nav-link">Find Community</a>
+                    <a href="/index.html" class="nav-link">Find Community</a>
+                    <a href="#find-events" clas="nav-link">Find Cons\Events</a>
                     <a href="/contribute" class="nav-link">Contribute</a>
                 </div>
                 <div class="mobile-menu-toggle" id="mobile-menu-btn">
@@ -35,6 +39,7 @@
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="#find-community">Find Community</a>
+            <a href="#find-events">Find Events</a>
         </div>
     </header>
 
@@ -42,21 +47,21 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">UK Furry Community Hub</h1>
-                <p class="hero-subtitle">Discover and connect with furry communities across the United Kingdom</p>
-                <a href="#find-community" class="cta-button">
-                    <i class="fas fa-search"></i>
-                    Find Conventions \ Events
+                <h1 class="hero-title">UK Furry Events & Conventions</h1>
+                <p class="hero-subtitle">Discover and connect with furry events and conventions across the United Kingdom</p>
+                <a href="#find-events" class="cta-button">
+                    <i class="fas fa-calendar-alt"></i>
+                    Find Upcoming Events
                 </a>
             </div>
         </section>
 
-        <!-- Find Community Section -->
-        <section id="find-community" class="find-community">
+        <!-- Find Events Section -->
+        <section id="find-events" class="find-community">
             <div class="container">
-                <h2 class="section-title">Find Conventions \ Events</h2>
-                <p style="text-align: center; color: #6b7280; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Browse Cons \ Events by region or search for your local area
+                <h2 class="section-title">Find Furry Events & Conventions</h2>
+                <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">
+                    Browse events by region or search for upcoming furry conventions
                 </p>
                 
                 <div class="search-container">
@@ -65,14 +70,14 @@
                         <input 
                             type="text" 
                             id="region-search" 
-                            placeholder="Search communities..." 
+                            placeholder="Search events..." 
                         >
                         <div id="region-list">
-                            <!-- Will be populated by JavaScript -->
+                            <!-- Events will be populated here by JavaScript -->
                         </div>
                     </div>
 
-                    <!-- Interactive Map (Leaflet) -->
+                    <!-- Interactive Map -->
                     <div class="map-container">
                         <div id="map" style="width:100%; height:500px; border-radius:10px;"></div>
                     </div>
@@ -86,33 +91,127 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3><i class="fas fa-paw" style="color: #a855f7; margin-right: 0.5rem;"></i>UK Furry Community Hub</h3>
-                    <p>Connecting furry communities across the United Kingdom</p>
+                    <h3 class="flex items-center"><i class="fas fa-paw text-purple-500 mr-2"></i>UK Furry Events</h3>
+                    <p>Discover furry events and conventions across the United Kingdom</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <a href="/">Home</a>
                     <a href="/about">About Us</a>
-                    <a href="#find-community">Find Community</a>
+                    <a href="#find-events">Find Events</a>
                 </div>
                 <div class="footer-section">
                     <h3>Community</h3>
                     <p>For community inquiries and suggestions, contact local group admins through their Telegram groups.</p>
                 <div class="footer-section">
                     <h3>Made By</h3>
-                    <p>Built with <i class="fas fa-code" style="color: #a855f7;"></i> by <a href="https://hyena-industries.com/" style="color: #a855f7; text-decoration: none; font-weight: 600;">Hyena Industries</a></p>
+                    <p>Built with <i class="fas fa-code text-purple-500"></i> by <a href="https://hyena-industries.com/" class="text-purple-500 font-semibold hover:underline">Hyena Industries</a></p>
                 </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 UK Furry Community Hub. Created with <i class="fas fa-heart" style="color: #ef4444;"></i> for the UK furry community by a Hyena :3
+                <p class="flex items-center">&copy; 2025 UK Furry Community Hub. Created with <i class="fas fa-heart text-red-500 mx-1"></i> for the UK furry community by a Hyena :3</p>
             </div>
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster.events@1.0.0/leaflet.markercluster.events.js"></script>
+    <script src="js/events-data.js"></script>
     <script src="js/events.js"></script>
-    <script src="script.js"></script>
-    <script src="js/events-main.js"></script>
+    <script>
+        // Initialize the map when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof initEventMap === 'function') {
+                initEventMap();
+            }
+
+            // Render initial list + markers
+            if (typeof getAllEvents === 'function') {
+                const allEvents = getAllEvents();
+                displayEvents(allEvents);
+                if (typeof updateMapMarkers === 'function') {
+                    updateMapMarkers(allEvents);
+                }
+            }
+            
+            // Handle event search
+            const searchInput = document.getElementById('region-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    filterEvents();
+                });
+            }
+        });
+        
+        function filterEvents() {
+            const searchTerm = document.getElementById('region-search').value.toLowerCase();
+            
+            const events = getAllEvents();
+            const filteredEvents = events.filter(event => {
+                // Filter by search term
+                const matchesSearch = !searchTerm || 
+                    event.name.toLowerCase().includes(searchTerm) ||
+                    event.city.toLowerCase().includes(searchTerm) ||
+                    event.region.toLowerCase().includes(searchTerm);
+
+                return matchesSearch;
+            });
+            
+            displayEvents(filteredEvents);
+            updateMapMarkers(filteredEvents);
+        }
+        
+        function displayEvents(events) {
+            const eventList = document.getElementById('region-list');
+            if (!eventList) return;
+            
+            if (events.length === 0) {
+                eventList.innerHTML = '<p class="text-gray-500">No events found matching your criteria.</p>';
+                return;
+            }
+            
+            // Match the community search card layout exactly (same spacing + typography)
+            const byCity = {};
+            (events || []).forEach(evt => {
+                const city = evt.city || 'Unknown';
+                if (!byCity[city]) byCity[city] = [];
+                byCity[city].push(evt);
+            });
+
+            const sortedCities = Object.keys(byCity).sort();
+
+            let html = '';
+            sortedCities.forEach(cityName => {
+                const cityEvents = byCity[cityName].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+                html += `
+                    <div style="margin-bottom: 0.75rem;">
+                        <strong style="color: #a855f7; display: block; margin-bottom: 0.5rem;">${escapeHtml(cityName)}</strong>
+                `;
+
+                cityEvents.forEach(event => {
+                    const typeText = event.type ? ` (${escapeHtml(event.type)})` : '';
+                    const sizeText = event.EventSize ? escapeHtml(event.EventSize) : 'Unknown';
+
+                    html += `
+                        <a href="#" class="community-card" style="margin-bottom: 0.5rem;" onclick="focusEventOnEventsPage('${event.id}'); return false;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${escapeHtml(event.name)}${typeText}</h4>
+                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">Event size: ${sizeText}</p>
+                                </div>
+                                <i class="fas fa-chevron-right" style="color: #a855f7;"></i>
+                            </div>
+                        </a>
+                    `;
+                });
+
+                html += '</div>';
+            });
+
+            eventList.innerHTML = html;
+        }
+    </script>
 </body>
 </html>

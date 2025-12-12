@@ -50,15 +50,20 @@ function initializeRegionList() {
     const regionList = document.getElementById('region-list');
     if (!regionList) return;
     
-    const allCommunities = getAllCommunities();
+    const allGroups = (typeof getAllCommunities === 'function') ? getAllCommunities() : [];
+    const allEvents = (typeof getAllEvents === 'function') ? getAllEvents() : [];
+    const allItems = [
+        ...allGroups.map(g => ({ kind: 'group', ...g })),
+        ...allEvents.map(e => ({ kind: 'event', ...e }))
+    ];
     
     // Group by city
     const citiesByName = {};
-    allCommunities.forEach(group => {
-        if (!citiesByName[group.city]) {
-            citiesByName[group.city] = [];
+    allItems.forEach(item => {
+        if (!citiesByName[item.city]) {
+            citiesByName[item.city] = [];
         }
-        citiesByName[group.city].push(group);
+        citiesByName[item.city].push(item);
     });
     
     // Sort cities alphabetically
@@ -66,7 +71,9 @@ function initializeRegionList() {
     
     let html = '';
     sortedCities.forEach(cityName => {
-        const groups = citiesByName[cityName];
+        const items = citiesByName[cityName];
+        const groups = items.filter(i => i.kind === 'group').sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+        const events = items.filter(i => i.kind === 'event').sort((a, b) => (a.name || '').localeCompare(b.name || ''));
         html += `
             <div style="margin-bottom: 0.75rem;">
                 <strong style="color: #a855f7; display: block; margin-bottom: 0.5rem;">${cityName}</strong>
@@ -74,13 +81,29 @@ function initializeRegionList() {
         
         groups.forEach(group => {
             html += `
-                <a href="/group?id=${group.id}" class="community-card" style="margin-bottom: 0.5rem;">
+                <a href="#" class="community-card" style="margin-bottom: 0.5rem;" onclick="focusItemOnMap('group', '${group.id}'); return false;">
                     <div style="display: flex; justify-content: space-between; align-items: start;">
                         <div>
                             <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${group.name}</h4>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">Community size: ${group.communitySize}</p>
                         </div>
                         <i class="fas fa-chevron-right" style="color: #a855f7;"></i>
+                    </div>
+                </a>
+            `;
+        });
+
+        events.forEach(evt => {
+            const sizeText = evt.EventSize ? `Event size: ${evt.EventSize}` : 'Event size: Unknown';
+            const typeText = evt.type ? ` (${evt.type})` : '';
+            html += `
+                <a href="#" class="community-card" style="margin-bottom: 0.5rem;" onclick="focusItemOnMap('event', '${evt.id}'); return false;">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${evt.name}${typeText}</h4>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">${sizeText}</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #0ea5e9;"></i>
                     </div>
                 </a>
             `;
@@ -102,12 +125,25 @@ function searchRegions() {
         return;
     }
     
-    const allCommunities = getAllCommunities();
-    const filtered = allCommunities.filter(community =>
-        community.name.toLowerCase().includes(searchTerm) ||
-        community.city.toLowerCase().includes(searchTerm) ||
-        community.county.toLowerCase().includes(searchTerm)
-    );
+    const allGroups = (typeof getAllCommunities === 'function') ? getAllCommunities() : [];
+    const allEvents = (typeof getAllEvents === 'function') ? getAllEvents() : [];
+    const allItems = [
+        ...allGroups.map(g => ({ kind: 'group', ...g })),
+        ...allEvents.map(e => ({ kind: 'event', ...e }))
+    ];
+
+    const filtered = allItems.filter(item => {
+        const name = (item.name || '').toLowerCase();
+        const city = (item.city || '').toLowerCase();
+        const county = (item.county || '').toLowerCase();
+        const region = (item.region || '').toLowerCase();
+        return (
+            name.includes(searchTerm) ||
+            city.includes(searchTerm) ||
+            county.includes(searchTerm) ||
+            region.includes(searchTerm)
+        );
+    });
     
     if (filtered.length === 0) {
         regionList.innerHTML = '<div style="text-align: center; padding: 2rem; color: #6b7280;">No communities found</div>';
@@ -115,19 +151,36 @@ function searchRegions() {
     }
     
     let html = '';
-    filtered.forEach(group => {
-        html += `
-            <a href="/group?id=${group.id}" class="community-card" style="margin-bottom: 0.75rem; display: block;">
-                <div style="display: flex; justify-content: space-between; align-items: start;">
-                    <div>
-                        <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${group.name}</h4>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">${group.city}, ${group.county}</p>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #9ca3af;">Community size: ${group.communitySize}</p>
+    filtered.forEach(item => {
+        if (item.kind === 'group') {
+            html += `
+                <a href="#" class="community-card" style="margin-bottom: 0.75rem; display: block;" onclick="focusItemOnMap('group', '${item.id}'); return false;">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${item.name}</h4>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">${item.city}, ${item.county}</p>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #9ca3af;">Community size: ${item.communitySize}</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #a855f7;"></i>
                     </div>
-                    <i class="fas fa-chevron-right" style="color: #a855f7;"></i>
-                </div>
-            </a>
-        `;
+                </a>
+            `;
+        } else {
+            const sizeText = item.EventSize ? `Event size: ${item.EventSize}` : 'Event size: Unknown';
+            const typeText = item.type ? ` (${item.type})` : '';
+            html += `
+                <a href="#" class="community-card" style="margin-bottom: 0.75rem; display: block;" onclick="focusItemOnMap('event', '${item.id}'); return false;">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h4 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #1f2937;">${item.name}${typeText}</h4>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #6b7280;">${item.city}, ${item.county}</p>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #9ca3af;">${sizeText}</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color: #0ea5e9;"></i>
+                    </div>
+                </a>
+            `;
+        }
     });
     
     regionList.innerHTML = html;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - UK Furry Community Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-bg">
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-paw"></i>
+                <span>UK Furry Community Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/events.html#find-events">Find Events</a>
+                <a href="/contribute">Contribute</a>
+            </div>
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/events.html#find-events">Find Events</a>
+            <a href="/contribute">Contribute</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/events.html#find-events">Events</a></li>
+                <li class="breadcrumb-item"><span id="breadcrumb-city">Loading...</span></li>
+                <li class="breadcrumb-item active"><span id="breadcrumb-event">Event</span></li>
+            </ul>
+        </div>
+
+        <section class="group-hero">
+            <div class="group-hero-content">
+                <div class="group-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h1 id="event-name">Loading...</h1>
+                <p class="group-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="event-location">Location</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="group-container">
+            <div class="group-main-content">
+                <div class="about-section">
+                    <h2><i class="fas fa-info-circle"></i> About This Event</h2>
+                    <p id="event-description">Loading event information...</p>
+                </div>
+
+                <div id="expectations-container" class="expect-section">
+                    <h2><i class="fas fa-sparkles"></i> What to Expect</h2>
+                    <div class="expect-grid">
+                        <div class="expect-card" id="expect-panels">
+                            <div class="expect-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h3>Panels & Talks</h3>
+                            <p>Organised panels, talks and scheduled programming</p>
+                        </div>
+
+                        <div class="expect-card" id="expect-chats">
+                            <div class="expect-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Active Chats</h3>
+                            <p>Stay connected with attendees via community chats</p>
+                        </div>
+
+                        <div class="expect-card" id="expect-art">
+                            <div class="expect-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Artists & Dealers</h3>
+                            <p>Art, dealers, commissions, and creative showcases</p>
+                        </div>
+
+                        <div class="expect-card" id="expect-community">
+                            <div class="expect-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Community</h3>
+                            <p>Meet new friends and enjoy the social atmosphere</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-sidebar">
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">
+                            <i class="fas fa-users"></i>
+                            Event Size
+                        </span>
+                        <span class="stat-value" id="event-size">Unknown</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">
+                            <i class="fas fa-circle"></i>
+                            Status
+                        </span>
+                        <span id="event-status" style="font-weight: 600;">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="join-button-container">
+                    <a id="join-link" href="#" target="_blank" class="join-button">
+                        <i class="fab fa-telegram"></i>
+                        Join on Telegram
+                    </a>
+                </div>
+
+                <div id="website-button-container" class="join-button-container" style="display: none;">
+                    <a id="website-link" href="#" target="_blank" class="join-button" style="background-color: #3b82f6;">
+                        <i class="fas fa-globe"></i>
+                        Visit Website
+                    </a>
+                </div>
+
+                <div class="qr-section">
+                    <h3>Quick Join</h3>
+                    <div class="qr-code" id="qr-code">
+                        <p class="qr-text">QR Code loading...</p>
+                    </div>
+                    <p class="qr-text">Scan with your phone to join</p>
+                </div>
+
+                <div class="share-section">
+                    <h3><i class="fas fa-share-alt"></i> Event Socials</h3>
+                    <div id="socials-container" class="share-buttons">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UK Furry Community Hub</h3>
+                <p>Connecting furry communities across the United Kingdom</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/events.html#find-events">Find Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Made By</h3>
+                <p>Built with <i class="fas fa-code" style="color: #a855f7;"></i> by <a href="https://hyena-industries.com/" style="color: #a855f7; text-decoration: none; font-weight: 600;">Hyena Industries</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UK Furry Community Hub.</p>
+        </div>
+    </footer>
+
+    <script src="js/events-data.js"></script>
+    <script src="js/event.js"></script>
+</body>
+</html>

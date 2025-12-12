@@ -1131,6 +1131,49 @@ body {
     font-size: 1rem;
 }
 
+/* Event Cards */
+.event-card {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-200;
+}
+
+.event-card:hover {
+    @apply shadow-md transform -translate-y-0.5;
+}
+
+.event-header {
+    @apply bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4;
+}
+
+.event-body {
+    @apply p-4;
+}
+
+.event-tag {
+    @apply inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-full mr-2 mb-2;
+}
+
+/* Map */
+#map {
+    @apply h-[600px] rounded-lg shadow-sm;
+}
+
+.search-container {
+    @apply grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8 mt-8;
+}
+
+/* Event Popup */
+.event-popup {
+    @apply p-2;
+}
+
+.event-popup h3 {
+    @apply font-bold text-purple-700 text-base;
+}
+
+.event-popup p {
+    @apply text-gray-700 text-sm;
+}
+
 .related-card-location {
     color: #6b7280;
     font-size: 0.9rem;
