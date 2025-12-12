@@ -32,7 +32,7 @@
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/#find-community">Find Community</a>
-            <a href="#find-events" clas="nav-link">Find Cons\Events</a>
+            <a href="/events.html#find-events">Find Cons\Events</a>
             <a href="/contribute">Contribute</a>
         </div>
     </header>
@@ -236,11 +236,14 @@
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        if (mobileMenuBtn && !mobileMenuBtn.dataset.mobileMenuBound) {
+            mobileMenuBtn.dataset.mobileMenuBound = '1';
+            mobileMenuBtn.addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                if (menu) menu.classList.toggle('active');
+            });
+        }
 
         // Load group information
         document.addEventListener('DOMContentLoaded', function() {

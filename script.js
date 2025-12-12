@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && !mobileMenuBtn.dataset.mobileMenuBound) {
+        mobileMenuBtn.dataset.mobileMenuBound = '1';
         mobileMenuBtn.addEventListener('click', function() {
             if (mobileMenu) {
                 mobileMenu.classList.toggle('active');

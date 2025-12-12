@@ -3,7 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && !mobileMenuBtn.dataset.mobileMenuBound) {
+        mobileMenuBtn.dataset.mobileMenuBound = '1';
         mobileMenuBtn.addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             // styles.css uses .mobile-menu.active to show the menu
