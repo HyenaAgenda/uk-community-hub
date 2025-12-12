@@ -2,9 +2,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', function() {
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('active');
+                return;
+            }
+
             navLinks.classList.toggle('mobile-menu');
             navLinks.classList.toggle('active');
             
@@ -24,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinksInMenu = document.querySelectorAll('.nav-links a, .nav-link');
     navLinksInMenu.forEach(link => {
         link.addEventListener('click', function() {
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                return;
+            }
+
             if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 navLinks.classList.remove('mobile-menu');
