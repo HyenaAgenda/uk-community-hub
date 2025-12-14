@@ -300,7 +300,7 @@ const ukCommunities = {
                         name: 'Warrington Furs',
                         description: 'Warrington furs is a community based in Cheshire that host regular fur meets every month at The Hideout in Warrington. This meet is a friendly and welcoming enviroment great for both newcomers and regular members. Note this is a 18+ meet with ID required to enter the Bar.',
                         telegramLink: 'https://t.me/+oKZ-9HG8-R5kNmY0',
-                        website: 'https://www.warringtonfurs.org.uk/',
+                        website: 'https://www.warringtonfurs.org/',
                         socials: {
                             twitter: "https://x.com/Warrington_Furs",
                             instagram: "https://www.instagram.com/warringtonfurs/"
